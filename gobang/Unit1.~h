@@ -13,6 +13,8 @@ class TForm1 : public TForm
 {
 __published:	// IDE-managed Components
         TImage *chessBoard;
+        void __fastcall chessBoardMouseDown(TObject *Sender,
+          TMouseButton Button, TShiftState Shift, int X, int Y);
 private:	// User declarations
 public:		// User declarations
         __fastcall TForm1(TComponent* Owner);

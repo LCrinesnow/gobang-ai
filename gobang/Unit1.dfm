@@ -18,5 +18,6 @@ object Form1: TForm1
     Top = 0
     Width = 680
     Height = 680
+    OnMouseDown = chessBoardMouseDown
   end
 end
