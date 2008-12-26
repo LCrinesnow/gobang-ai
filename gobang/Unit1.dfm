@@ -20,4 +20,20 @@ object Form1: TForm1
     Height = 720
     OnMouseDown = chessBoardMouseDown
   end
+  object RadioGroup1: TRadioGroup
+    Left = 736
+    Top = 32
+    Width = 185
+    Height = 105
+    Caption = 'Player1:'
+    TabOrder = 0
+  end
+  object RadioGroup2: TRadioGroup
+    Left = 976
+    Top = 32
+    Width = 185
+    Height = 105
+    Caption = 'Player2:'
+    TabOrder = 1
+  end
 end

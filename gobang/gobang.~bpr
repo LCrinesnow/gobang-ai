@@ -4,7 +4,7 @@
   <MACROS>
     <VERSION value="BCB.06.00"/>
     <PROJECT value="gobang.exe"/>
-    <OBJFILES value="gobang.obj Unit1.obj ai.obj human.obj"/>
+    <OBJFILES value="gobang.obj Unit1.obj ai.obj"/>
     <RESFILES value="gobang.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
@@ -57,7 +57,6 @@
       <FILE FILENAME="gobang.cpp" FORMNAME="" UNITNAME="gobang" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="Unit1.cpp" FORMNAME="Form1" UNITNAME="Unit1" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="ai.cpp" FORMNAME="" UNITNAME="ai" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
-      <FILE FILENAME="human.cpp" FORMNAME="" UNITNAME="human" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
   </FILELIST>
   <BUILDTOOLS>
   </BUILDTOOLS>

@@ -1,0 +1,7 @@
+#include "human.h"
+AI::AI(struct tBoard **board,int playerId)
+{
+ _board=board;
+ _playerId=playerId;
+ _phase=playerId;
+}
