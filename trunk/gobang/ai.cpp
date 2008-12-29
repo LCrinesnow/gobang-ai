@@ -8,7 +8,7 @@ AI::AI(struct tBoard **board,int playerId)
 
 tStatus AI::check(int x,int y)
 {
- int tempx,tempy;
+int tempx,tempy;
  int count=0;
  tempx=x;
  tempy=y;
@@ -21,7 +21,7 @@ tStatus AI::check(int x,int y)
    break;
  }
  //往下找
- tempy=y+1;
+ tempy=y;
  while(_board[tempx][tempy].value==_playerId)
  {
   ++count;
@@ -29,7 +29,7 @@ tStatus AI::check(int x,int y)
   if(tempy>17)
    break;
  }
- if(count>=5)
+ if(count>=6)//進入點算二次，所以要多1或把次數減1
   return win;
 
  tempx=x;
@@ -44,7 +44,7 @@ tStatus AI::check(int x,int y)
    break;
  }
  //往右找
- tempx=x+1;
+ tempx=x;
  while(_board[tempx][tempy].value==_playerId)
  {
   ++count;
@@ -52,7 +52,7 @@ tStatus AI::check(int x,int y)
   if(tempx>17)
    break;
  }
- if(count>=5)
+ if(count>=6)//進入點算二次，所以要多1或把次數減1
   return win;
 
  tempx=x;
@@ -68,8 +68,8 @@ tStatus AI::check(int x,int y)
    break;
  }
  //往右下找
- tempx=x+1;
- tempy=y+1;
+ tempx=x;
+ tempy=y;
  while(_board[tempx][tempy].value==_playerId)
  {
   ++count;
@@ -78,7 +78,7 @@ tStatus AI::check(int x,int y)
   if(tempx>17 || tempy>17)
    break;
  }
- if(count>=5)
+ if(count>=6)//進入點算二次，所以要多1或把次數減1
   return win;
   
  tempx=x;
@@ -94,8 +94,8 @@ tStatus AI::check(int x,int y)
    break;
  }
  //往左下找
- tempx=x-1;
- tempy=y+1;
+ tempx=x;
+ tempy=y;
  while(_board[tempx][tempy].value==_playerId)
  {
   ++count;
@@ -104,7 +104,7 @@ tStatus AI::check(int x,int y)
   if(tempx<0 || tempy>17)
    break;
  }
- if(count>=5)
+ if(count>=6)//進入點算二次，所以要多1或把次數減1
   return win;
  return none;
 }

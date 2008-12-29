@@ -9,7 +9,8 @@ class AI
         void think();
         bool push(int x, int y);
         tStatus check(int x,int y);
-  protected:
+ // protected:
+ private:
         struct tBoard **_board;
         int _playerId;
         int _phase;
