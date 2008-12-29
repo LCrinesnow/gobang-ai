@@ -38,8 +38,9 @@ __fastcall TForm1::TForm1(TComponent* Owner)
    board[i][j].phase=0;
   }
  }
- player1=new AI(board,1);
- player2=new AI(board,2);
+ player1=new human(board,1);
+ player2=new human(board,2);
+ player1->push(0,0);
  turn=0;
  flag=1;
 }

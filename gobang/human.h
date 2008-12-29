@@ -5,8 +5,9 @@
 class human:public AI
 {
  public:
-	human(struct tBoard **board,int playerId) : AI(_board,_playerId)
+	human(struct tBoard **board,int playerId) : AI(board,playerId)
 	{
+
 	}
 };
 #endif
