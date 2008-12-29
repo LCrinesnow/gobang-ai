@@ -7,8 +7,8 @@ struct tBoard
 };
 enum tStatus
 {
- win,
- none,
+ win = 1,
+ none = 0,
 };
 
 #endif

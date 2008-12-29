@@ -4,11 +4,12 @@
 class AI
 {
  public:
+        //AI();
         AI(struct tBoard **board,int playerId);
-        virtual void think();
+        void think();
         bool push(int x, int y);
         tStatus check(int x,int y);
- private:
+ // protected:
         struct tBoard **_board;
         int _playerId;
         int _phase;

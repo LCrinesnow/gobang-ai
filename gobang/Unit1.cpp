@@ -4,9 +4,9 @@
 #pragma hdrstop
 
 #include "Unit1.h"
-#include "gobang.h"
-#include "ai.cpp"
-#include "human.cpp"
+
+#include "ai.h"
+#include "human.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -38,9 +38,10 @@ __fastcall TForm1::TForm1(TComponent* Owner)
    board[i][j].phase=0;
   }
  }
- player1=new human(board,1);
- player2=new human(board,2);
-
+ player1=new AI(board,1);
+ player2=new AI(board,2);
+ turn=0;
+ flag=1;
 }
 //---------------------------------------------------------------------------
 
@@ -54,18 +55,23 @@ void __fastcall TForm1::chessBoardMouseDown(TObject *Sender,
  y1=((float)Y/40);
  x=ROUND(x1);
  y=ROUND(y1);
- if(board[x][y]==0 && x>0 && x<18 && y>0 && y<18)
- {
+ //if(turn==)
 
-  board[x][y]=true;
+ if(board[x][y].value==0 && x>=0 && x<17 && y>=0 && y<17)
+ {
+  //board[x][y].value=flag;
   if(flag==1)
   {
    chessBoard->Canvas->Brush->Color=clBlack;
+   if(player1->push(x,y))
+     chessBoard->Canvas->Brush->Color=clRed;
    flag=0;
   }
   else
   {
    chessBoard->Canvas->Brush->Color=clWhite;
+   if(player2->push(x,y))
+     chessBoard->Canvas->Brush->Color=clRed;
    flag=1;
   }
   chessBoard->Canvas->Ellipse(ROUND(x1)*40+20,ROUND(y1)*40+20,ROUND(x1)*40-20,ROUND(y1)*40-20);
