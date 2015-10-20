@@ -1,0 +1,1 @@
+We want to develop best gobang AI and we will implement gobang AI by difference algorithm. The first, we will implement gobang AI by decision tree. Second, we will implement by genetic algorithm and we will compared difference algorithm intelligent. The goal is to develop the best gobang AI.
